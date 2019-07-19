@@ -1,0 +1,40 @@
+* {
+    font-family: 'Indie Flower', cursive;
+}
+header {
+    width: 100%;
+}
+header h1 {
+    text-align: center;
+}
+main{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    width: 100%;
+}
+
+#container {
+    width: 100%;
+}
+#photo {
+    height: 150px;
+    width: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+};
+
+footer {
+    float: clear;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: green;
+    }
+}
