@@ -9,6 +9,7 @@ function MyHorn(horn){
   this.description=horn.description;
   this.keyword=horn.keyword;
   this.horns=horn.horns;
+  loadOptions(this.keyword);
 }
 
 //an array to hold all the MyHorn
@@ -49,11 +50,17 @@ MyHorn.readJson=(filename)=>{
       });
     })
     // DOM
-    .then(MyHorn.loadMyHorn).then(MyHorn.imgselect);
+    .then(MyHorn.loadMyHorn)
+    .then(MyHorn.imgselect)
 
 };
 
 MyHorn.loadMyHorn=()=>MyHorn.allMyHorn.forEach(horn=> horn.render());
+
+function loadOptions(arr) {
+  // $('option').append('<option>test</option>');
+  console.log(arr);
+}
 
 // MyHorn.loadMyHorn=()=>
 //   MyHorn.allMyHorn.forEach(horn=>{$('#photo-template').append(horn.tohtml());});
