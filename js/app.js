@@ -25,20 +25,8 @@ MyHorns.readJson = function(){
 };
 
 $('select').on('change',function(){
- 
-  let i = $(this).val();
-  console.log(i);
-  $('.rhino').show();
-  // $('div').show(i);
-
-  
-  // $('div').remove();
-  // //clear the dropdown list
-  // $('option').remove();
-  // MyHorn.allMyHorn=[];
-
-  // //load the page
-  // $(()=>MyHorn.readJson('data/page-1.json'));
+  console.log($(this).val());
+  $('div.' + $(this).val()).show();
 });
 
 MyHorns.prototype.render = function(keyword) {
