@@ -1,5 +1,4 @@
 const allHorns = [];
-const allKeys = [];
 
 const MyHorns = function(image_url, title, description, keyword, horns){
   this.image_url = image_url;
@@ -8,7 +7,6 @@ const MyHorns = function(image_url, title, description, keyword, horns){
   this.keyword = keyword;
   this.horns = horns;
   allHorns.push(this);
-  allKeys.push(this.keyword);
 }
 
 MyHorns.readJson = function(){
@@ -21,21 +19,37 @@ MyHorns.readJson = function(){
     allHorns.forEach(MyHorn => {
       let keyword = MyHorn.keyword;
       MyHorn.render(keyword);
+      $('div').hide();
     });
   });
 };
 
+$('select').on('change',function(){
+ 
+  let i = $(this).val();
+  console.log(i);
+  $('.rhino').show();
+  // $('div').show(i);
+
+  
+  // $('div').remove();
+  // //clear the dropdown list
+  // $('option').remove();
+  // MyHorn.allMyHorn=[];
+
+  // //load the page
+  // $(()=>MyHorn.readJson('data/page-1.json'));
+});
+
 MyHorns.prototype.render = function(keyword) {
-  $('select').append($('<option>', {text:keyword}));
+  $('select').append($('<option>', {text:keyword}).attr('class',this.keyword));
+
   $('main').append('<div class="clone"></div>');
   let hornClone=$('div[class="clone"]');
   let hornHtml=$('#photo-template').html();
   hornClone.html(hornHtml);
   hornClone.find('h2').text(this.title);
   hornClone.find('img').attr('src',this.image_url);
-  hornClone.find('p').text(this.description);
-  hornClone.find('p').text(this.keyword);
-  hornClone.find('p').text(this.MyHorn);
   hornClone.removeClass('clone');
   hornClone.attr('class',this.keyword);
 }
