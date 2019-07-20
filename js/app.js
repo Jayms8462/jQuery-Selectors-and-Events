@@ -1,4 +1,5 @@
 const allHorns = [];
+const allKeys = [];
 
 const MyHorns = function(image_url, title, description, keyword, horns){
   this.image_url = image_url;
@@ -7,6 +8,7 @@ const MyHorns = function(image_url, title, description, keyword, horns){
   this.keyword = keyword;
   this.horns = horns;
   allHorns.push(this);
+  allKeys.push(this.keyword);
 }
 
 MyHorns.readJson = function(){
@@ -19,19 +21,19 @@ MyHorns.readJson = function(){
     allHorns.forEach(MyHorn => {
       let keyword = MyHorn.keyword;
       MyHorn.render(keyword);
-      $('div').hide();
     });
   });
 };
 
 $('select').on('change',function(){
+  $('div').hide();
   console.log($(this).val());
   $('div.' + $(this).val()).show();
 });
 
 MyHorns.prototype.render = function(keyword) {
+  minOp(keyword);
   $('select').append($('<option>', {text:keyword}).attr('class',this.keyword));
-
   $('main').append('<div class="clone"></div>');
   let hornClone=$('div[class="clone"]');
   let hornHtml=$('#photo-template').html();
@@ -40,6 +42,11 @@ MyHorns.prototype.render = function(keyword) {
   hornClone.find('img').attr('src',this.image_url);
   hornClone.removeClass('clone');
   hornClone.attr('class',this.keyword);
+}
+
+
+function minOp(keyword) {
+  $('option.' + keyword).remove();
 }
 
 MyHorns.readJson();
