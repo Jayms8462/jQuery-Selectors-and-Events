@@ -1,0 +1,15 @@
+img {
+    height: 100px;
+    width: 150px;
+}
+
+select {
+    display: block;
+    margin: auto;
+}
+
+div img, h2, p{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
