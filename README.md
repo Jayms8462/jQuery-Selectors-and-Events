@@ -43,16 +43,56 @@ You have the option of using the provided `index.html` file, but it is not a req
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
 ```
-Number and name of feature: ________________________________
+Number and name of feature: Project
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 6 Hours
 
-Start time: _____
+Start time: 1200
 
-Finish time: _____
+Finish time: 1800
 
-Actual time needed to complete: _____
-```
+Actual time needed to complete: 9 Hours
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Number and name of feature: Importing Json and inputting it into Object
+
+Estimate of time needed to complete: 2 Hours
+
+Start time: 1200
+
+Finish time: 1400
+
+Actual time needed to complete: 2 Hours
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Number and name of feature: Appending oject to DOM
+
+Estimate of time needed to complete: 1 Hours
+
+Start time: 1400
+
+Finish time: 1500
+
+Actual time needed to complete: 2 Hours
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Number and name of feature: Adding Options to the Select Menu
+
+Estimate of time needed to complete: 1 Hours
+
+Start time: 1600
+
+Finish time: 1700
+
+Actual time needed to complete: 2 Hours
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Number and name of feature: Show and Hide Elements
+
+Estimate of time needed to complete: 1 Hours
+
+Start time: 1800
+
+Finish time: 1900
+
+Actual time needed to complete: 3 Hours
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 Add this information to your README.
 
