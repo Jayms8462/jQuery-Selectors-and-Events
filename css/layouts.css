@@ -1,6 +1,15 @@
 img {
     height: 200px;
     width: 300px;
+    border-radius: 30px;
+}
+
+div {
+    width: 33%;
+    height: 210px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    float: left;
 }
 
 select {
@@ -18,4 +27,9 @@ div img, h2, p{
 div {
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    float: left;
 }
